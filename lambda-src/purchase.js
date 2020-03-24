@@ -42,7 +42,7 @@ exports.handler = async function(event) {
   try {
     charge = await stripe.charges.create(
       {
-        currency: "usd",
+        currency: "aud",
         amount: data.amount,
         source: data.token.id,
         receipt_email: data.token.email,

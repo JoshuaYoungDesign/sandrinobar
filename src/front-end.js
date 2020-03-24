@@ -1,11 +1,12 @@
 import uuid from 'uuid/v4';
 
+// Stripe handles pricing in cents, so this is actually 1000 = $10.00
 const amount = 1000;
 const $messageBox = document.getElementById('messageBox');
 const $button = document.querySelector('button');
 
 function resetButtonText() {
-  $button.innerHTML = 'Click to Buy! <strong>$10</strong>';
+  $button.innerHTML = 'Click to Buy';
 }
 
 const handler = StripeCheckout.configure({
